@@ -88,11 +88,6 @@ class _HomeViewState extends State<HomeView> {
                         },
                       ),
               ),
-
-              // Align(
-              //   alignment: AlignmentGeometry.bottomRight,
-              //   child:
-              // ),
             ],
           ),
         ),

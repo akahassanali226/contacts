@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 class ContactContainer extends StatelessWidget {
   ContactModel contactModel;
   VoidCallback onContactDeleted;
+
   ContactContainer({
     super.key,
     required this.contactModel,
@@ -74,7 +75,8 @@ class ContactContainer extends StatelessWidget {
                   Row(
                     children: [
                       Icon(Icons.email, color: ColorManager.darkBlueColor),
-                      Text(contactModel.email),
+                      SizedBox(width: 8),
+                      Expanded(child: Text(contactModel.email, maxLines: 2)),
                     ],
                   ),
                   SizedBox(height: height * 0.01),
@@ -85,6 +87,8 @@ class ContactContainer extends StatelessWidget {
                         Icons.phone_in_talk,
                         color: ColorManager.darkBlueColor,
                       ),
+                      SizedBox(width: 8),
+
                       Text(contactModel.phone),
                     ],
                   ),
